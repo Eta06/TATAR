@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>TATAR</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Montserrat.css') }}">
+	<style>
+		body {
+			background-color: rgba(18, 18, 18, 1);
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+			color: #fff;
+            overflow: hidden;
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+		}
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: white;
+            font-size: 32px;
+            margin: 0;
+            padding: 16px;
+        }
+
+		header {
+			border-bottom: 1px solid #444;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#content {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: calc(100vh - 80px);
+		}
+
+		#left {
+			flex: 0.2;
+            height: 100%;
+            border-right: 1px solid #444;
+            flex-wrap: wrap;
+		}
+
+		#right {
+			flex: 0.8;
+			height: 100%;
+            overflow-y: scroll;
+		}
+
+        .leftmenu {
+            transition: 0.3s;
+            margin-left: 0;
+            border-color: transparent;
+            color: white;
+            width: 90%;
+            border-radius: 20px;
+            height: 40px;
+            margin-bottom: 20px;
+            text-align: left;
+            background-color: transparent;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            --tw-bg-opacity: 1;
+            border-radius: 10px;
+            background-color: rgba(86, 88, 105, 0.53);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: transparent;
+        }
+
+        .leftmenu:hover {
+            transition: 0.3s;
+            background-color: #444;
+            border: 2px solid #444;
+        }
+
+        .search-btn::before{
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+        }
+        .search-btn::after{
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .left-btn {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .search-btn-icon {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .left-btn::before{
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .leftmenulist {
+
+            margin: 0;
+            padding: 0;
+            margin-right: 30px;
+            transition: 0.3s;
+        }
+
+        .sign-in {
+            transition: 0.3s;
+            border: 2px solid plum;
+            border-radius: 20px;
+            background-color: plum;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .sign-in:hover{
+            transition: 0.3s;
+            border: 4px solid #e575e5;
+            background-color: #e37ae3;
+        }
+
+        .gradient-text {
+          font-size: 4em;
+          background: linear-gradient(to right, #00ff9d, #3db7ac);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          padding: 10px;
+        }
+
+        @media screen and (max-width: 1267px) {
+          .leftmenu {
+              color: transparent;
+              display: flex;
+          }
+          .left-btn {
+              color: white;
+              width: 40px;
+          }
+          .fa-home {
+              margin-left: 3px;
+              margin-right: 0;
+              justify-content: center;
+              justify-items: center;
+          }
+          .fa-bell {
+              margin-left: 5px;
+              margin-right: 0;
+              justify-content: center;
+              justify-items: center;
+          }
+          .fa-plus {
+              margin-left: 5px;
+              margin-top: 2px;
+              margin-right: 0;
+              justify-content: center;
+              justify-items: center;
+          }
+          .fa-envelope {
+              margin-left: 3.5px;
+              margin-top: 1px;
+              margin-right: 0;
+              justify-content: center;
+              justify-items: center;
+          }
+          .leftmenulist {
+              width: 45px;
+          }
+          .search-btn-icon {
+              color: white;
+              margin-left: 3px;
+              margin-right: 0;
+              justify-content: center;
+              justify-items: center;
+          }
+          .gradient-text {
+              font-size: 35px;
+          }
+          .sign-in {
+            width: 85px;
+            height: 35px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+          #search-input {
+            transition: 0.3s;
+            padding-left: 5px;
+            border: 2px solid #444;
+            background-color: #444;
+            color: white;
+            width: 90%;
+            border-radius: 20px;
+            height: 35px;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 16px;
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+          #left {
+              flex: 0.1;
+          }
+          #right {
+              flex: 0.9;
+          }
+        }
+
+
+	</style>
+    <link rel="icon" type="image/ico" sizes="32x32" href="/static/css/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<header>
+		<h1 class="gradient-text">TATAR</h1>
+		<button onclick="window.location.href='/login'" class="sign-in">Log Out</button>
+	</header>
+    <script>
+    function replaceWithInput() {
+      var searchBtn = document.getElementsByClassName("search-btn")[0];
+      var input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.setAttribute("placeholder", "Search");
+      input.setAttribute("id", "search-input");
+      input.classList.add("leftmenu");
+      searchBtn.parentNode.replaceChild(input, searchBtn);
+      input.focus();
+
+      document.addEventListener("click", function(event) {
+          if (event.target.id !== "search-btn" && event.target.tagName !== "INPUT") {
+            console.log("Button or input not clicked");
+            input.parentElement.replaceChild(searchBtn, input);
+          }
+      });
+    }
+    </script>
+
+	<div id="content">
+		<div id="left">
+            <ul id="menu">
+                <li class="leftmenulist"><button class="leftmenu"><i class="fa fa-magnifying-glass left-btn"></i> Arkadaşların</button></li>
+                <li class="leftmenulist"><button class="leftmenu"><i class="fa fa-user left-btn"></i> User1</button></li>
+            </ul>
+        </div>
+		<div id="right">
+			<h1>Arkadaşların:</h1>
+        </div>
+	</div>
+</body>
+</html>
