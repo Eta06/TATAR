@@ -1,2 +1,2 @@
-# tatar
-Tatar Chat App
+# TATAR
+TATAR Chat App
