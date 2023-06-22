@@ -21,6 +21,5 @@ Yerli ve AI güvenli sohbet uygulaması
 
 [Image Generator]()
 
-[]
 
 
