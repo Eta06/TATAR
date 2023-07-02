@@ -28,7 +28,7 @@ def index():
 def nsfwbulucu(image):
     url = 'https://api.deepai.org/api/nsfw-detector'
     headers = {
-        'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'
+        'api-key': ''
     }
     response = requests.post(
         url,
